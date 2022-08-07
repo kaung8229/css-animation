@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Effect</title>
+    <style class="text/css">
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            width: 200px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 60px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+
+            background: linear-gradient(
+                60deg,
+                blue,
+                skyblue,
+                blue,
+                skyblue
+            );
+            background-size: 300%;
+
+            transition: background-position 0.5s;
+        }
+        .btn:hover{
+            background-position: right;
+        }
+        .btn:active{
+            box-shadow: 0px 1px 15px rgba(0,0,0,0.3);
+            transform: translateY(5px);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button type="button" class="btn">Hover Me</button>
+
+
+</body>
+</html>

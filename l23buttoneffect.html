@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+        <link rel="stylesheet" href="../dltwdfbatch7/libs/fontawesomepro/css/all.css">
+        <style type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a{
+                background-color: green;
+                text-decoration: none;
+                color: #fff;
+                font-size: 24px;
+                width: 200px;
+                text-align: center;
+                padding: 15px;
+            }
+
+            a span{
+                position: relative;
+                transition: 0.5s;
+            }
+
+            a span::before{
+                content: '\f118';
+                font-family: "Font Awesome 5 Pro";
+
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                opacity: 0;
+
+                transition: 0.5s;
+            }
+            a:hover span::before{
+                opacity: 1;
+            }
+
+            a:hover span{
+                padding-right: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <a href="#">Hover Me <span></span></a>
+
+    </body>
+</html>

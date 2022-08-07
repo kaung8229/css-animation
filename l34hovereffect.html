@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hover Effect</title>
+        <style type="text/css">
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn{
+                background: steelblue;
+                color: #fff;
+                font-size: 22px;
+                text-transform: uppercase;
+                padding: 12px 40px;
+                border: none;
+                cursor: pointer;
+
+                position: relative;
+            }
+
+            .btn::before{
+                content: '';
+                width: 25px;
+                height: 25px;
+
+                position: absolute;
+                top: -5px;
+                left: -5px;
+
+                border-top: 2px solid steelblue;
+                border-left: 2px solid steelblue;
+
+                transition: 0.5s;
+
+                z-index: -1;
+            }
+
+            .btn::after{
+                content: '';
+                width: 25px;
+                height: 25px;
+
+                position: absolute;
+                bottom: -5px;
+                right: -5px;
+
+                border-bottom: 2px solid steelblue;
+                border-right: 2px solid steelblue;
+
+                transition: 0.5s;
+
+                z-index: -1;
+            }
+
+            .btn:hover::before{
+                /* left: calc(100% - 25px + 5px); */
+                left: calc(100% - 22px);
+
+                border-left: none;
+                border-right: 2px solid steelblue;
+            }
+
+            .btn:hover::after{
+                /* right: calc(100% - 25px + 5px); */
+                right: calc(100% - 22px);
+
+                border-right: none;
+                border-left: 2px solid steelblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <button type="button" class="btn">Hover me</button>
+
+    </body>
+</html>

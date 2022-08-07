@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clip Path</title>
+    <style type="text/css">
+
+        /* Properties + value = declaration */
+
+        .square{
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+        }
+
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            border-radius: 50%;
+        }
+
+        .triangle{
+            width: 0;
+            height: 0;
+         
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid steelblue;
+        }
+
+        /* clip-path */
+        /* circle();
+        ellipse();
+        polygon(); */
+
+        .squareshape{
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            
+            float: left;
+
+            margin-right: 20px;
+        }
+
+        .circleshape{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+
+            /* border-radius: 50%;
+            clip-path: circle(); */
+            /* with parameter */
+            clip-path: circle(50%);
+
+            shape-outside: circle();
+
+            float: left;
+
+            margin-right: 20px;
+
+        }
+
+        .ellipsecircle{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+
+            /* ellipse(width height); */
+            clip-path: ellipse(50% 70%);
+            shape-outside: ellipse(50% 70%);
+       
+            float: left;
+
+            margin-right: 20px;
+        }
+
+        .polygonshape{
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+
+            /* https://bennettfeely.com/clippy/ */
+            /* clip-path: polygon(0% 0%, 100% 0%, 100% 24%, 62% 25%, 63% 100%, 38% 99%, 38% 26%, 0% 25%);
+            shape-outside: polygon(0% 0%, 100% 0%, 100% 24%, 62% 25%, 63% 100%, 38% 99%, 38% 26%, 0% 25%); */
+
+            clip-path: polygon(0% 0%, 30% 0, 50% 70%, 70% 0, 100% 0, 75% 100%, 25% 100%);
+            shape-outside: polygon(0% 0%, 30% 0, 50% 70%, 70% 0, 100% 0, 75% 100%, 25% 100%);
+
+            float: left;
+
+            margin-right: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="square">square</div>
+
+    <hr/>
+
+    <div class="circle">circle</div>
+
+    <hr/>
+
+    <div class="triangle">triangle</div>
+
+    <hr/>
+
+    <div>
+
+        <div class="squareshape"></div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam. Nesciunt reprehenderit expedita harum quos et quibusdam, velit voluptates voluptatibus molestias, est quis. Architecto, commodi cupiditate! Maxime omnis libero quia laborum ab veritatis numquam iste explicabo doloribus natus eos aliquid, in tempora porro corporis commodi beatae earum architecto dignissimos consequuntur nisi. Reprehenderit, provident doloribus voluptas totam sequi incidunt deserunt tempora explicabo quod corporis sit, dolore veniam ipsam adipisci, culpa quo modi vel! Perspiciatis numquam amet beatae sunt enim sint modi deserunt impedit fuga sequi, rem veritatis rerum aut, dolorem commodi esse reiciendis voluptatibus, cupiditate et vel reprehenderit inventore eum ut?</p>
+
+        <hr/>
+
+        <div class="circleshape"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit deleniti possimus architecto nam ipsa corrupti eius labore, ut vel sed ratione obcaecati neque aliquid, beatae ex esse et ipsam itaque dolorum eaque blanditiis? Id sit consectetur tempora error quia doloribus reiciendis, eaque recusandae qui tempore, repudiandae modi. Tenetur, tempore ea? Ex magni nam aut tempore incidunt qui repellendus necessitatibus omnis porro, perferendis soluta vel. Numquam incidunt sapiente, hic vero perspiciatis, atque minima adipisci voluptatum iure, minus eius. Consectetur nesciunt magni debitis officiis qui amet deleniti dolorum recusandae quia, explicabo quae mollitia deserunt tenetur laborum aliquam unde voluptas obcaecati itaque?</p>
+
+        <hr/>
+
+        <div class="ellipsecircle"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit deleniti possimus architecto nam ipsa corrupti eius labore, ut vel sed ratione obcaecati neque aliquid, beatae ex esse et ipsam itaque dolorum eaque blanditiis? Id sit consectetur tempora error quia doloribus reiciendis, eaque recusandae qui tempore, repudiandae modi. Tenetur, tempore ea? Ex magni nam aut tempore incidunt qui repellendus necessitatibus omnis porro, perferendis soluta vel. Numquam incidunt sapiente, hic vero perspiciatis, atque minima adipisci voluptatum iure, minus eius. Consectetur nesciunt magni debitis officiis qui amet deleniti dolorum recusandae quia, explicabo quae mollitia deserunt tenetur laborum aliquam unde voluptas obcaecati itaque?</p>
+
+        <hr/>
+
+        <div class="circleshape"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit deleniti possimus architecto nam ipsa corrupti eius labore, ut vel sed ratione obcaecati neque aliquid, beatae ex esse et ipsam itaque dolorum eaque blanditiis? Id sit consectetur tempora error quia doloribus reiciendis, eaque recusandae qui tempore, repudiandae modi. Tenetur, tempore ea? Ex magni nam aut tempore incidunt qui repellendus necessitatibus omnis porro, perferendis soluta vel. Numquam incidunt sapiente, hic vero perspiciatis, atque minima adipisci voluptatum iure, minus eius. Consectetur nesciunt magni debitis officiis qui amet deleniti dolorum recusandae quia, explicabo quae mollitia deserunt tenetur laborum aliquam unde voluptas obcaecati itaque?</p>
+
+        <hr/>
+
+        <div class="polygonshape"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit deleniti possimus architecto nam ipsa corrupti eius labore, ut vel sed ratione obcaecati neque aliquid, beatae ex esse et ipsam itaque dolorum eaque blanditiis? Id sit consectetur tempora error quia doloribus reiciendis, eaque recusandae qui tempore, repudiandae modi. Tenetur, tempore ea? Ex magni nam aut tempore incidunt qui repellendus necessitatibus omnis porro, perferendis soluta vel. Numquam incidunt sapiente, hic vero perspiciatis, atque minima adipisci voluptatum iure, minus eius. Consectetur nesciunt magni debitis officiis qui amet deleniti dolorum recusandae quia, explicabo quae mollitia deserunt tenetur laborum aliquam unde voluptas obcaecati itaque?</p>
+
+    </div>
+
+</body>
+</html>

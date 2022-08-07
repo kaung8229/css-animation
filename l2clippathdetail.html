@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clip path detail</title>
+
+    <style type="text/css">
+
+        .shape{
+            width: 500px;
+            height: 300px;
+
+            background: red;
+        }
+
+        #circle{
+            /* clip-path: circle(); */
+
+            /* with px */
+            /* clip-path: circle(100px); */
+            /* clip-path: circle(200px); */
+            /* clip-path: circle(250px); */
+
+
+            /* circle(shape-radius at position) */
+            /* clip-path: circle(200px at center); df */
+            /* clip-path: circle(200px at left);
+            clip-path: circle(200px at right);
+            clip-path: circle(200px at top); */
+            /* clip-path: circle(200px at bottom); */
+
+
+            /* clip-path: circle(100px at 0); */
+            /* clip-path: circle(200px at 300px); */
+
+
+            /* cricle(shape-radius at width height) */
+            /* clip-path: circle(200px at 0px 0px); */
+
+            /* clip-path: circle(10%); */
+            /* clip-path: circle(40%); */
+
+            clip-path: circle(50% at 50% 20%);
+        }
+
+        #polygon{
+            clip-path: polygon(0% 0%, 100% 0%, 100% 27%, 62% 32%, 61% 100%, 41% 100%, 40% 28%, 1% 25%);
+        }
+
+        #ellipse{
+
+            /* clip-path: ellipse(150px 50px); */
+            /* clip-path: ellipse(100px 50px); */
+
+            /* clip-path: ellipse(50% d50%); */
+            
+
+            /* ellipse(shape-radius at position) */
+            /* clip-path: ellipse(200px at center); df */
+            /* clip-path: ellipse(200px at left);
+            clip-path: ellipse(200px at right);
+            clip-path: ellipse(200px at top);
+            clip-path: ellipse(200px at bottom); */
+
+            /* ellipse(shape-radius at width) */
+            /* clip-path: ellipse(30% 100% at 20%);
+            clip-path: ellipse(30% 100% at 40%); */
+
+            /* ellipse(shape-radius at width height) */
+            /* clip-path: ellipse(30% 100% at 20% 20%); */
+            clip-path: ellipse(30% 100% at 50% 10%);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <img src="./img/dog.jpg" alt="dogcircle" id="circle" class="shape">
+
+    <hr/>
+
+    <img src="./img/dog.jpg" alt="dogpolygon" id="polygon" class="shape">
+
+    <hr/>
+
+    <img src="./img/dog.jpg" alt="dogpolygon" id="ellipse" class="shape">
+
+</body>
+</html>

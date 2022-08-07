@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House</title>
+
+    <style>
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 500px;
+            background: #f4f4f4;
+        }
+
+        .div1{
+            position: relative;
+            width: 250px;
+            height: 100px;
+            background: linear-gradient(black, silver);
+            border: 1px solid;
+            box-shadow: -5px 0 10px rgba(0,0,0,0.5);
+            margin: auto;
+            perspective: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            perspective: 300px;
+        }
+        .div3{
+            width: 50px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid;
+            box-shadow: -5px 0 10px rgba(0,0,0,0.5);
+
+            transform: rotateY(0deg);
+            transform-origin: top left;
+
+            transition: 0.5s;
+        }
+        .div3:hover{
+            transform: rotateY(-45deg);
+        }
+        .div4{
+            width: 50px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid;
+            box-shadow: -5px 0 10px rgba(0,0,0,0.5);
+
+            transform: rotateY(45deg);
+            transform-origin: center right;
+
+            transition: 0.5s;
+        }
+        .div4:hover{
+            transform: rotateY(0deg);
+        }
+        .div5{
+            position: absolute;
+            top: -130px;
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(black, silver);
+            border: 1px solid;
+            box-shadow: -5px 0 10px rgba(0,0,0,0.5);
+            padding: 50px;
+
+            transform: rotateX(45deg);
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="div1">
+            <div class="div2">
+                <div class="div3"></div>
+                <div class="div4"></div>
+            </div>
+            <div class="div5">DIV5</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
